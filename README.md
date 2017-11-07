@@ -1,26 +1,12 @@
-# docker-compose lamp stack sample template
+# docker-compose config for desktophero
 
-A sample configuration of a lamp-stack development environment using docker-compose.
+## Instructions
+- Checkout the repository
+- Enter the directory and run ```docker-compose up --build -d```
+- open localhost:8280 in your browser and import ./desktophero/database/sample/quick-start.sql into the "hero" database (will automate this in a future version)
+- open localhost:8200/editor in your browser and have fun
 
-## getting startet
+Please support this wonderful project.
+https://www.kickstarter.com/projects/263291121/desktophero-free-3d-printable-character-maker?lang=de
 
-1. Download this repositories files
-```
-git clone --depth=1 --branch=master git@github.com:cioddi/docker_compose_lamp.git your_project_image_name
-
-# remove the .git folder
-rm -rf your_project_image_name/.git
-```
-
-2. Edit mysql/init.sql to create an initial database for your project
-3. Add your preojects PHP files to this images folder. I prefer doing it as a git submodule.
-```
-git submodule add {path_to_the_git_repo}
-```
-
-4. Adjust the apache host config in php/hostconfig.conf and the mounted webroot (currently ./html) in docker-compose.yml to meet your projects needs.
-  - You can specify a command that is supposed to run on container start inside the apache container at the "command" key of the php service defined in doccker-compose.yml.
-5. Build and start the docker services defined in the docker-compose.yml file using the command ```docker-compose up -d --build```.
-6. Browse to your php projects webroot on http://localhost:8000
-7. Browse to PhpMyAdmin on http://localhost:8080 to inspect the database or import/export database data.
-
+THX to the creator Andrew Stockton (https://github.com/stockto2) and Arian Croft (https://www.thingiverse.com/dutchmogul/about) who made most of the 3D models
