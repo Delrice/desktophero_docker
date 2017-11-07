@@ -2,6 +2,7 @@
 
 ## Instructions
 - Checkout the repository
+- change the database host in desktophero/config/environments.json to "db"
 - Enter the directory and run ```docker-compose up --build -d```
 - open localhost:8280 in your browser and import ./desktophero/database/sample/quick-start.sql into the "hero" database (will automate this in a future version)
 - open localhost:8200/editor in your browser and have fun
