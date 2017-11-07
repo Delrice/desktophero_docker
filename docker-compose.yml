@@ -19,6 +19,7 @@ services:
     volumes:
       - ./container_data/log:/var/log/apache2
       - ./desktophero:/var/www/html
+      - ./php/environments.json:/var/www/html/config/environments.json
     depends_on:
       db:
         condition: service_healthy
